@@ -1,0 +1,246 @@
+[
+  {
+    "id": "math-basics",
+    "category": "mathematics",
+    "title": "Math Basics",
+    "title_id": "Dasar Matematika",
+    "difficulty": "beginner",
+    "xpReward": 30,
+    "questions": [
+      {
+        "id": "q1",
+        "type": "mc",
+        "question": "What is 7 × 8?",
+        "question_id": "Berapakah 7 × 8?",
+        "options": ["54", "56", "63", "48"],
+        "options_id": ["54", "56", "63", "48"],
+        "answer": 1,
+        "explanation": "7 multiplied by 8 equals 56.",
+        "explanation_id": "7 dikalikan 8 sama dengan 56."
+      },
+      {
+        "id": "q2",
+        "type": "tf",
+        "question": "A fraction with the same numerator and denominator equals 1.",
+        "question_id": "Pecahan dengan pembilang dan penyebut yang sama nilainya 1.",
+        "answer": true,
+        "explanation": "Any non-zero number divided by itself equals 1.",
+        "explanation_id": "Setiap bilangan bukan nol dibagi dirinya sendiri hasilnya 1."
+      },
+      {
+        "id": "q3",
+        "type": "mc",
+        "question": "Which number is a prime?",
+        "question_id": "Angka manakah yang merupakan bilangan prima?",
+        "options": ["9", "15", "17", "21"],
+        "options_id": ["9", "15", "17", "21"],
+        "answer": 2,
+        "explanation": "17 is only divisible by 1 and itself.",
+        "explanation_id": "17 hanya bisa dibagi oleh 1 dan dirinya sendiri."
+      },
+      {
+        "id": "q4",
+        "type": "mc",
+        "question": "What is 3/4 of 20?",
+        "question_id": "Berapakah 3/4 dari 20?",
+        "options": ["10", "15", "12", "5"],
+        "options_id": ["10", "15", "12", "5"],
+        "answer": 1,
+        "explanation": "3/4 × 20 = 15.",
+        "explanation_id": "3/4 × 20 = 15."
+      },
+      {
+        "id": "q5",
+        "type": "tf",
+        "question": "The perimeter of a square is side × 4.",
+        "question_id": "Keliling persegi adalah sisi × 4.",
+        "answer": true,
+        "explanation": "Yes, all four sides are equal.",
+        "explanation_id": "Ya, keempat sisinya sama panjang."
+      }
+    ]
+  },
+  {
+    "id": "science-nature",
+    "category": "science",
+    "title": "Nature & Science",
+    "title_id": "Alam & Sains",
+    "difficulty": "beginner",
+    "xpReward": 25,
+    "questions": [
+      {
+        "id": "q1",
+        "type": "mc",
+        "question": "What do plants need for photosynthesis?",
+        "question_id": "Apa yang dibutuhkan tumbuhan untuk fotosintesis?",
+        "options": ["Oxygen only", "Sunlight, water, CO2", "Soil only", "Darkness"],
+        "options_id": ["Hanya oksigen", "Cahaya matahari, air, CO2", "Hanya tanah", "Kegelapan"],
+        "answer": 1,
+        "explanation": "Photosynthesis requires sunlight, water and carbon dioxide.",
+        "explanation_id": "Fotosintesis membutuhkan cahaya matahari, air, dan karbon dioksida."
+      },
+      {
+        "id": "q2",
+        "type": "tf",
+        "question": "Water boils at 100°C at sea level.",
+        "question_id": "Air mendidih pada 100°C di permukaan laut.",
+        "answer": true,
+        "explanation": "At standard atmospheric pressure, water boils at 100°C.",
+        "explanation_id": "Pada tekanan atmosfer standar, air mendidih pada 100°C."
+      },
+      {
+        "id": "q3",
+        "type": "mc",
+        "question": "Which planet is known as the Red Planet?",
+        "question_id": "Planet mana yang dikenal sebagai Planet Merah?",
+        "options": ["Venus", "Mars", "Jupiter", "Mercury"],
+        "options_id": ["Venus", "Mars", "Jupiter", "Merkurius"],
+        "answer": 1,
+        "explanation": "Mars appears reddish due to iron oxide on its surface.",
+        "explanation_id": "Mars tampak kemerahan karena oksida besi di permukaannya."
+      }
+    ]
+  },
+  {
+    "id": "languages-vocab",
+    "category": "languages",
+    "title": "Language Basics",
+    "title_id": "Dasar Bahasa",
+    "difficulty": "beginner",
+    "xpReward": 20,
+    "questions": [
+      {
+        "id": "q1",
+        "type": "mc",
+        "question": "What does 'hello' mean in Indonesian?",
+        "question_id": "Apa arti 'hello' dalam bahasa Indonesia?",
+        "options": ["Selamat tinggal", "Halo / Selamat pagi", "Terima kasih", "Maaf"],
+        "options_id": ["Selamat tinggal", "Halo / Selamat pagi", "Terima kasih", "Maaf"],
+        "answer": 1,
+        "explanation": "'Hello' is commonly 'Halo' or a greeting like 'Selamat pagi'.",
+        "explanation_id": "'Hello' biasanya 'Halo' atau sapaan seperti 'Selamat pagi'."
+      },
+      {
+        "id": "q2",
+        "type": "tf",
+        "question": "English and Indonesian belong to the same language family.",
+        "question_id": "Bahasa Inggris dan Indonesia berasal dari rumpun bahasa yang sama.",
+        "answer": false,
+        "explanation": "English is Germanic; Indonesian is Austronesian.",
+        "explanation_id": "Bahasa Inggris termasuk rumpun Germanik; Indonesia termasuk Austronesia."
+      },
+      {
+        "id": "q3",
+        "type": "mc",
+        "question": "Which word is a synonym of 'happy'?",
+        "question_id": "Kata manakah sinonim dari 'bahagia'?",
+        "options": ["Sad", "Joyful", "Angry", "Tired"],
+        "options_id": ["Sedih", "Gembira", "Marah", "Lelah"],
+        "answer": 1,
+        "explanation": "Joyful means feeling or showing great happiness.",
+        "explanation_id": "Gembira berarti merasa atau menunjukkan kebahagiaan."
+      }
+    ]
+  },
+  {
+    "id": "tech-intro",
+    "category": "technology",
+    "title": "Tech Foundations",
+    "title_id": "Dasar Teknologi",
+    "difficulty": "beginner",
+    "xpReward": 25,
+    "questions": [
+      {
+        "id": "q1",
+        "type": "mc",
+        "question": "What does HTML stand for?",
+        "question_id": "Apa kepanjangan dari HTML?",
+        "options": ["Hyper Text Markup Language", "High Tech Modern Language", "Home Tool Markup Language", "Hyperlink Text Management"],
+        "options_id": ["Hyper Text Markup Language", "High Tech Modern Language", "Home Tool Markup Language", "Hyperlink Text Management"],
+        "answer": 0,
+        "explanation": "HTML is Hyper Text Markup Language, the standard for web pages.",
+        "explanation_id": "HTML adalah Hyper Text Markup Language, standar untuk halaman web."
+      },
+      {
+        "id": "q2",
+        "type": "tf",
+        "question": "JavaScript can run in the browser without a server.",
+        "question_id": "JavaScript bisa berjalan di browser tanpa server.",
+        "answer": true,
+        "explanation": "JavaScript is executed by the browser's engine.",
+        "explanation_id": "JavaScript dijalankan oleh mesin browser."
+      },
+      {
+        "id": "q3",
+        "type": "mc",
+        "question": "Which is a programming language?",
+        "question_id": "Manakah yang merupakan bahasa pemrograman?",
+        "options": ["CSS", "Python", "HTML", "JSON"],
+        "options_id": ["CSS", "Python", "HTML", "JSON"],
+        "answer": 1,
+        "explanation": "Python is a general-purpose programming language.",
+        "explanation_id": "Python adalah bahasa pemrograman tujuan umum."
+      }
+    ]
+  },
+  {
+    "id": "history-basics",
+    "category": "history",
+    "title": "History Snapshot",
+    "title_id": "Sekilas Sejarah",
+    "difficulty": "beginner",
+    "xpReward": 20,
+    "questions": [
+      {
+        "id": "q1",
+        "type": "mc",
+        "question": "What is a primary source?",
+        "question_id": "Apa itu sumber primer?",
+        "options": ["A modern textbook", "Evidence from the time being studied", "A Wikipedia article", "A movie about history"],
+        "options_id": ["Buku teks modern", "Bukti dari masa yang dikaji", "Artikel Wikipedia", "Film tentang sejarah"],
+        "answer": 1,
+        "explanation": "Primary sources are original materials from the period.",
+        "explanation_id": "Sumber primer adalah bahan asli dari masa tersebut."
+      },
+      {
+        "id": "q2",
+        "type": "tf",
+        "question": "Historians only use written documents.",
+        "question_id": "Sejarawan hanya menggunakan dokumen tertulis.",
+        "answer": false,
+        "explanation": "They also use artifacts, oral histories, images and more.",
+        "explanation_id": "Mereka juga menggunakan artefak, sejarah lisan, gambar, dan lainnya."
+      }
+    ]
+  },
+  {
+    "id": "life-skills",
+    "category": "life-skills",
+    "title": "Everyday Skills",
+    "title_id": "Keterampilan Sehari-hari",
+    "difficulty": "beginner",
+    "xpReward": 20,
+    "questions": [
+      {
+        "id": "q1",
+        "type": "mc",
+        "question": "What is a good first step when feeling overwhelmed?",
+        "question_id": "Langkah pertama yang baik saat merasa kewalahan?",
+        "options": ["Ignore the feeling", "Break tasks into smaller steps", "Do everything at once", "Avoid the problem"],
+        "options_id": ["Abaikan perasaan", "Pecah tugas menjadi langkah kecil", "Kerjakan semuanya sekaligus", "Hindari masalah"],
+        "answer": 1,
+        "explanation": "Smaller steps make big tasks manageable.",
+        "explanation_id": "Langkah kecil membuat tugas besar lebih mudah dikelola."
+      },
+      {
+        "id": "q2",
+        "type": "tf",
+        "question": "Sleep is important for learning and memory.",
+        "question_id": "Tidur penting untuk belajar dan memori.",
+        "answer": true,
+        "explanation": "Sleep helps consolidate memories and restore the brain.",
+        "explanation_id": "Tidur membantu mengonsolidasikan memori dan memulihkan otak."
+      }
+    ]
+  }
+]

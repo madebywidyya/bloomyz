@@ -1,0 +1,75 @@
+[
+  {
+    "id": "math-patterns",
+    "category": "mathematics",
+    "title": "Patterns & Numbers",
+    "title_id": "Pola & Angka",
+    "cards": [
+      {"front": "What is a pattern?", "front_id": "Apa itu pola?", "back": "A repeated or predictable arrangement of elements.", "back_id": "Susunan elemen yang berulang atau dapat diprediksi."},
+      {"front": "What is a fraction?", "front_id": "Apa itu pecahan?", "back": "A number that represents equal parts of a whole.", "back_id": "Angka yang mewakili bagian-bagian sama besar dari keseluruhan."},
+      {"front": "Numerator", "front_id": "Pembilang", "back": "The top number in a fraction showing how many parts.", "back_id": "Angka di atas garis pecahan yang menunjukkan berapa bagian."},
+      {"front": "Denominator", "front_id": "Penyebut", "back": "The bottom number showing total equal parts.", "back_id": "Angka di bawah garis pecahan yang menunjukkan total bagian sama besar."},
+      {"front": "Prime number", "front_id": "Bilangan prima", "back": "A number greater than 1 with only two factors: 1 and itself.", "back_id": "Bilangan lebih dari 1 yang hanya punya dua faktor: 1 dan dirinya sendiri."}
+    ]
+  },
+  {
+    "id": "science-basics",
+    "category": "science",
+    "title": "Science Essentials",
+    "title_id": "Inti Sains",
+    "cards": [
+      {"front": "Photosynthesis", "front_id": "Fotosintesis", "back": "Process by which plants make food using sunlight, water and CO₂.", "back_id": "Proses tumbuhan membuat makanan menggunakan cahaya, air, dan CO₂."},
+      {"front": "Atom", "front_id": "Atom", "back": "The basic unit of a chemical element.", "back_id": "Unit dasar dari unsur kimia."},
+      {"front": "Gravity", "front_id": "Gravitasi", "back": "The force that attracts objects toward each other.", "back_id": "Gaya yang menarik benda satu sama lain."},
+      {"front": "Ecosystem", "front_id": "Ekosistem", "back": "A community of living organisms interacting with their environment.", "back_id": "Komunitas makhluk hidup yang berinteraksi dengan lingkungannya."}
+    ]
+  },
+  {
+    "id": "languages-words",
+    "category": "languages",
+    "title": "Useful Words",
+    "title_id": "Kata Berguna",
+    "cards": [
+      {"front": "Hello", "front_id": "Hello", "back": "Halo / Selamat pagi / Selamat siang", "back_id": "Halo / Selamat pagi / Selamat siang"},
+      {"front": "Thank you", "front_id": "Thank you", "back": "Terima kasih", "back_id": "Terima kasih"},
+      {"front": "Please", "front_id": "Please", "back": "Tolong / Silakan", "back_id": "Tolong / Silakan"},
+      {"front": "Synonym", "front_id": "Sinonim", "back": "A word with the same or similar meaning.", "back_id": "Kata yang memiliki arti sama atau mirip."},
+      {"front": "Antonym", "front_id": "Antonim", "back": "A word with the opposite meaning.", "back_id": "Kata yang memiliki arti berlawanan."}
+    ]
+  },
+  {
+    "id": "tech-terms",
+    "category": "technology",
+    "title": "Tech Terms",
+    "title_id": "Istilah Teknologi",
+    "cards": [
+      {"front": "HTML", "front_id": "HTML", "back": "HyperText Markup Language — structure of web pages.", "back_id": "HyperText Markup Language — struktur halaman web."},
+      {"front": "CSS", "front_id": "CSS", "back": "Cascading Style Sheets — visual design of web pages.", "back_id": "Cascading Style Sheets — desain visual halaman web."},
+      {"front": "JavaScript", "front_id": "JavaScript", "back": "Programming language that makes web pages interactive.", "back_id": "Bahasa pemrograman yang membuat halaman web interaktif."},
+      {"front": "Algorithm", "front_id": "Algoritma", "back": "A step-by-step procedure to solve a problem.", "back_id": "Prosedur langkah demi langkah untuk menyelesaikan masalah."}
+    ]
+  },
+  {
+    "id": "life-habits",
+    "category": "life-skills",
+    "title": "Healthy Habits",
+    "title_id": "Kebiasaan Sehat",
+    "cards": [
+      {"front": "Pomodoro technique", "front_id": "Teknik Pomodoro", "back": "Work 25 minutes, then take a short break.", "back_id": "Bekerja 25 menit, lalu istirahat singkat."},
+      {"front": "Growth mindset", "front_id": "Pola pikir berkembang", "back": "Belief that abilities can be developed through effort.", "back_id": "Keyakinan bahwa kemampuan bisa dikembangkan lewat usaha."},
+      {"front": "Active recall", "front_id": "Active recall", "back": "Testing yourself instead of only re-reading notes.", "back_id": "Menguji diri sendiri daripada hanya membaca ulang catatan."},
+      {"front": "Spaced repetition", "front_id": "Pengulangan berjarak", "back": "Reviewing material at increasing intervals over time.", "back_id": "Mengulas materi dengan interval yang semakin panjang."}
+    ]
+  },
+  {
+    "id": "islamic-basics",
+    "category": "islamic-studies",
+    "title": "Islamic Studies Basics",
+    "title_id": "Dasar Studi Islam",
+    "cards": [
+      {"front": "The Five Pillars", "front_id": "Rukun Islam", "back": "Shahada, Salah, Zakat, Sawm, Hajj.", "back_id": "Syahadat, Shalat, Zakat, Puasa, Haji."},
+      {"front": "Shahada", "front_id": "Syahadat", "back": "Declaration of faith: there is no god but Allah, and Muhammad is His messenger.", "back_id": "Pernyataan iman: tidak ada tuhan selain Allah, dan Muhammad adalah utusan-Nya."},
+      {"front": "Salah", "front_id": "Shalat", "back": "The five daily prayers.", "back_id": "Lima shalat wajib setiap hari."}
+    ]
+  }
+]

@@ -1,0 +1,433 @@
+[
+  {
+    "id": "mathematics",
+    "name": "Mathematics",
+    "name_id": "Matematika",
+    "description": "Numbers, patterns and logic",
+    "description_id": "Angka, pola, dan logika",
+    "icon": "📐",
+    "color": "lilac",
+    "level": "All levels",
+    "level_id": "Semua level",
+    "lessons": [
+      {
+        "id": "math-patterns",
+        "title": "Patterns Around Us",
+        "title_id": "Pola di Sekitar Kita",
+        "duration": "8 min",
+        "level": "Beginner",
+        "level_id": "Pemula",
+        "summary": "Discover how patterns help us understand numbers and everyday objects.",
+        "summary_id": "Kenali bagaimana pola membantu kita memahami angka dan benda di sekitar.",
+        "body": "A pattern is a repeated or predictable arrangement. Patterns appear in number sequences, shapes, music, and nature. Finding the rule helps us predict what comes next.",
+        "body_id": "Pola adalah susunan yang berulang atau dapat diprediksi. Pola muncul dalam barisan angka, bentuk, musik, dan alam. Dengan menemukan aturannya, kita bisa memperkirakan apa yang muncul berikutnya.",
+        "points": [
+          "Look for what changes and what stays the same.",
+          "Describe the rule in your own words.",
+          "Use the rule to predict the next item."
+        ],
+        "points_id": [
+          "Amati apa yang berubah dan apa yang tetap.",
+          "Jelaskan aturan pola dengan kata-katamu sendiri.",
+          "Gunakan aturan itu untuk memperkirakan bagian berikutnya."
+        ]
+      },
+      {
+        "id": "math-fractions",
+        "title": "A Friendly Guide to Fractions",
+        "title_id": "Mengenal Pecahan",
+        "duration": "10 min",
+        "level": "Beginner",
+        "level_id": "Pemula",
+        "summary": "Understand parts of a whole with simple examples.",
+        "summary_id": "Pahami bagian dari satu keseluruhan melalui contoh sederhana.",
+        "body": "A fraction describes equal parts of a whole. The denominator tells how many equal parts make the whole; the numerator tells how many of those parts we mean.",
+        "body_id": "Pecahan menjelaskan bagian-bagian sama besar dari satu keseluruhan. Penyebut menunjukkan jumlah seluruh bagian yang sama besar, sedangkan pembilang menunjukkan berapa bagian yang dimaksud.",
+        "points": [
+          "The numerator is written above the fraction bar.",
+          "The denominator is written below the fraction bar.",
+          "One half means one of two equal parts."
+        ],
+        "points_id": [
+          "Pembilang ditulis di atas garis pecahan.",
+          "Penyebut ditulis di bawah garis pecahan.",
+          "Setengah berarti satu dari dua bagian yang sama besar."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "science",
+    "name": "Science",
+    "name_id": "Sains",
+    "description": "Explore the wonders of nature",
+    "description_id": "Jelajahi keajaiban alam",
+    "icon": "🧪",
+    "color": "mint",
+    "level": "All levels",
+    "level_id": "Semua level",
+    "lessons": [
+      {
+        "id": "science-plants",
+        "title": "How Plants Make Food",
+        "title_id": "Cara Tumbuhan Membuat Makanan",
+        "duration": "9 min",
+        "level": "Beginner",
+        "level_id": "Pemula",
+        "summary": "Meet photosynthesis, the process that helps plants make their own food.",
+        "summary_id": "Kenali fotosintesis, proses yang membantu tumbuhan membuat makanannya sendiri.",
+        "body": "Photosynthesis is the process by which green plants use light energy to make sugars from water and carbon dioxide. Chlorophyll helps capture light, and oxygen is released as a by-product.",
+        "body_id": "Fotosintesis adalah proses tumbuhan hijau menggunakan energi cahaya untuk membuat gula dari air dan karbon dioksida. Klorofil membantu menangkap cahaya, dan oksigen dilepaskan sebagai hasil samping.",
+        "points": [
+          "Plants absorb water mainly through their roots.",
+          "Leaves take in carbon dioxide from the air.",
+          "Light energy powers the process."
+        ],
+        "points_id": [
+          "Tumbuhan menyerap air terutama melalui akar.",
+          "Daun mengambil karbon dioksida dari udara.",
+          "Energi cahaya menggerakkan proses tersebut."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "languages",
+    "name": "Languages",
+    "name_id": "Bahasa",
+    "description": "Words open up the world",
+    "description_id": "Kata membuka dunia",
+    "icon": "🌍",
+    "color": "peach",
+    "level": "All levels",
+    "level_id": "Semua level",
+    "lessons": [
+      {
+        "id": "lang-vocab",
+        "title": "Build a Daily Vocabulary Habit",
+        "title_id": "Membangun Kebiasaan Kosakata Harian",
+        "duration": "7 min",
+        "level": "Beginner",
+        "level_id": "Pemula",
+        "summary": "Learn a practical way to remember and use new words.",
+        "summary_id": "Pelajari cara praktis mengingat dan menggunakan kata baru.",
+        "body": "Vocabulary grows when you meet words in context and use them actively. Keep a small word list, write an example sentence, and revisit the words over time.",
+        "body_id": "Kosakata berkembang saat kita menemukan kata dalam konteks dan menggunakannya secara aktif. Buat daftar kata kecil, tulis contoh kalimat, lalu tinjau kembali secara berkala.",
+        "points": [
+          "Learn a few useful words at a time.",
+          "Write a sentence for each new word.",
+          "Review words after a day and a week."
+        ],
+        "points_id": [
+          "Pelajari beberapa kata berguna setiap kali belajar.",
+          "Tulis satu kalimat untuk setiap kata baru.",
+          "Ulangi kosakata setelah satu hari dan satu minggu."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "technology",
+    "name": "Technology",
+    "name_id": "Teknologi",
+    "description": "Create something new",
+    "description_id": "Ciptakan sesuatu yang baru",
+    "icon": "💻",
+    "color": "blue",
+    "level": "All levels",
+    "level_id": "Semua level",
+    "lessons": [
+      {
+        "id": "tech-web",
+        "title": "How Websites Work",
+        "title_id": "Bagaimana Website Bekerja",
+        "duration": "8 min",
+        "level": "Beginner",
+        "level_id": "Pemula",
+        "summary": "Understand the basic roles of browsers, servers, and web pages.",
+        "summary_id": "Pahami peran dasar browser, server, dan halaman web.",
+        "body": "A browser requests a web page from a server. The server sends files such as HTML, CSS, JavaScript, and images. The browser reads those files and displays the page.",
+        "body_id": "Browser meminta halaman web dari server. Server mengirim file seperti HTML, CSS, JavaScript, dan gambar. Browser membaca file tersebut lalu menampilkan halaman.",
+        "points": [
+          "HTML gives a page its structure.",
+          "CSS controls its appearance.",
+          "JavaScript adds behavior and interaction."
+        ],
+        "points_id": [
+          "HTML memberi struktur halaman.",
+          "CSS mengatur tampilannya.",
+          "JavaScript menambahkan perilaku dan interaksi."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "history",
+    "name": "History & Culture",
+    "name_id": "Sejarah & Budaya",
+    "description": "Stories that shape our world",
+    "description_id": "Kisah yang membentuk dunia",
+    "icon": "🏛️",
+    "color": "yellow",
+    "level": "All levels",
+    "level_id": "Semua level",
+    "lessons": [
+      {
+        "id": "history-sources",
+        "title": "Reading Historical Sources",
+        "title_id": "Membaca Sumber Sejarah",
+        "duration": "9 min",
+        "level": "Beginner",
+        "level_id": "Pemula",
+        "summary": "Learn to ask careful questions about evidence from the past.",
+        "summary_id": "Belajar mengajukan pertanyaan kritis tentang bukti masa lalu.",
+        "body": "Historians use primary and secondary sources. A primary source comes from the period being studied, while a secondary source interprets or discusses evidence later. Both need context and careful evaluation.",
+        "body_id": "Sejarawan menggunakan sumber primer dan sekunder. Sumber primer berasal dari masa yang sedang dikaji, sedangkan sumber sekunder menafsirkan atau membahas bukti setelahnya. Keduanya perlu dilihat dalam konteks dan dinilai secara cermat.",
+        "points": [
+          "Ask who created the source and when.",
+          "Consider the creator's purpose and audience.",
+          "Compare it with other evidence."
+        ],
+        "points_id": [
+          "Tanyakan siapa pembuat sumber dan kapan dibuat.",
+          "Pertimbangkan tujuan dan audiens pembuatnya.",
+          "Bandingkan dengan bukti lainnya."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "arts",
+    "name": "Arts & Creativity",
+    "name_id": "Seni & Kreativitas",
+    "description": "Imagine, make and express",
+    "description_id": "Berimajinasi, berkarya, dan berekspresi",
+    "icon": "🎨",
+    "color": "peach",
+    "level": "All levels",
+    "lessons": [
+      {
+        "id": "arts-color",
+        "title": "The Feel of Color",
+        "title_id": "Mengenal Nuansa Warna",
+        "duration": "6 min",
+        "level": "Beginner",
+        "level_id": "Pemula",
+        "summary": "Explore how colors can create mood and visual harmony.",
+        "summary_id": "Jelajahi bagaimana warna membangun suasana dan harmoni visual.",
+        "body": "Artists use hue, value, and saturation to make visual choices. A limited palette can help a design feel connected, while contrast helps important elements stand out.",
+        "body_id": "Seniman menggunakan hue, value, dan saturation untuk menentukan pilihan visual. Palet terbatas dapat membuat desain terasa menyatu, sedangkan kontras membantu elemen penting terlihat menonjol.",
+        "points": [
+          "Hue is the color family.",
+          "Value describes how light or dark a color is.",
+          "Saturation describes how vivid or muted it looks."
+        ],
+        "points_id": [
+          "Hue adalah keluarga warna.",
+          "Value menjelaskan tingkat terang atau gelap warna.",
+          "Saturation menjelaskan seberapa kuat atau redup warna terlihat."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "geography",
+    "name": "Geography",
+    "name_id": "Geografi",
+    "description": "Discover our planet",
+    "description_id": "Kenali planet kita",
+    "icon": "🗺️",
+    "color": "blue",
+    "level": "All levels",
+    "level_id": "Semua level",
+    "lessons": [
+      {
+        "id": "geo-maps",
+        "title": "How to Read a Map",
+        "title_id": "Cara Membaca Peta",
+        "duration": "7 min",
+        "level": "Beginner",
+        "level_id": "Pemula",
+        "summary": "Understand symbols, scale, direction, and map legends.",
+        "summary_id": "Pahami simbol, skala, arah, dan legenda peta.",
+        "body": "A map is a simplified representation of a place. Its title tells the area or topic, the legend explains symbols, the scale relates map distance to real distance, and a compass rose can show direction.",
+        "body_id": "Peta adalah gambaran sederhana suatu tempat. Judul menunjukkan wilayah atau topik, legenda menjelaskan simbol, skala menghubungkan jarak pada peta dengan jarak sebenarnya, dan mawar kompas menunjukkan arah.",
+        "points": [
+          "Read the title and legend first.",
+          "Check the scale before estimating distance.",
+          "Use direction markers to orient yourself."
+        ],
+        "points_id": [
+          "Baca judul dan legenda terlebih dahulu.",
+          "Periksa skala sebelum memperkirakan jarak.",
+          "Gunakan penanda arah untuk menentukan orientasi."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "life-skills",
+    "name": "Life Skills",
+    "name_id": "Keterampilan Hidup",
+    "description": "Skills for everyday life",
+    "description_id": "Keterampilan untuk kehidupan sehari-hari",
+    "icon": "🌱",
+    "color": "mint",
+    "lessons": [
+      {
+        "id": "life-goals",
+        "title": "Small Goals, Real Progress",
+        "title_id": "Target Kecil, Kemajuan Nyata",
+        "duration": "6 min",
+        "level": "Beginner",
+        "level_id": "Pemula",
+        "summary": "Turn a broad intention into a clear, manageable next step.",
+        "summary_id": "Ubah niat yang luas menjadi langkah berikutnya yang jelas dan terjangkau.",
+        "body": "A useful goal is specific and realistic. Break a large task into smaller actions, decide when to do the first one, and review what helped or got in the way.",
+        "body_id": "Target yang berguna bersifat spesifik dan realistis. Pecah tugas besar menjadi tindakan kecil, tentukan kapan memulai langkah pertama, lalu tinjau hal yang membantu atau menghambat.",
+        "points": [
+          "Choose one outcome to focus on.",
+          "Make the first step small and clear.",
+          "Review and adjust your plan."
+        ],
+        "points_id": [
+          "Pilih satu hasil yang ingin dicapai.",
+          "Buat langkah pertama kecil dan jelas.",
+          "Tinjau dan sesuaikan rencanamu."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "psychology",
+    "name": "Psychology & Society",
+    "name_id": "Psikologi & Masyarakat",
+    "description": "Understand people and society",
+    "description_id": "Memahami manusia dan masyarakat",
+    "icon": "🧠",
+    "color": "lilac",
+    "lessons": [
+      {
+        "id": "psy-emotions",
+        "title": "Naming Emotions",
+        "title_id": "Mengenali Emosi",
+        "duration": "7 min",
+        "level": "Beginner",
+        "level_id": "Pemula",
+        "summary": "Build emotional vocabulary to communicate experiences more clearly.",
+        "summary_id": "Bangun kosakata emosi agar pengalaman dapat dikomunikasikan dengan lebih jelas.",
+        "body": "Emotions are responses to experiences and situations. Naming an emotion can help someone describe what they are experiencing, but people may feel several emotions at once and context matters.",
+        "body_id": "Emosi adalah respons terhadap pengalaman dan situasi. Menamai emosi dapat membantu seseorang menjelaskan apa yang dirasakan, tetapi seseorang bisa merasakan beberapa emosi sekaligus dan konteks tetap penting.",
+        "points": [
+          "Use specific words rather than only 'good' or 'bad'.",
+          "Notice the situation and your interpretation of it.",
+          "Remember that emotions do not define a person."
+        ],
+        "points_id": [
+          "Gunakan kata yang lebih spesifik daripada hanya 'baik' atau 'buruk'.",
+          "Perhatikan situasi dan bagaimana kamu menafsirkannya.",
+          "Ingat bahwa emosi tidak mendefinisikan seseorang."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "islamic-studies",
+    "name": "Islamic Studies",
+    "name_id": "Studi Islam",
+    "description": "Faith, history and character",
+    "description_id": "Iman, sejarah, dan akhlak",
+    "icon": "🌙",
+    "color": "mint",
+    "lessons": [
+      {
+        "id": "islam-adab",
+        "title": "Everyday Adab",
+        "title_id": "Adab dalam Keseharian",
+        "duration": "8 min",
+        "level": "Beginner",
+        "level_id": "Pemula",
+        "summary": "Explore how good manners shape daily interactions.",
+        "summary_id": "Jelajahi bagaimana akhlak baik membentuk interaksi sehari-hari.",
+        "body": "Adab refers to proper manners and conduct. In everyday life, it can include speaking kindly, keeping promises, respecting others, and seeking knowledge with humility. For detailed religious rulings, consult qualified teachers and reliable references.",
+        "body_id": "Adab merujuk pada tata krama dan perilaku yang baik. Dalam keseharian, adab dapat mencakup berbicara dengan santun, menepati janji, menghormati orang lain, dan mencari ilmu dengan rendah hati. Untuk hukum agama yang terperinci, rujuk guru yang kompeten dan sumber tepercaya.",
+        "points": [
+          "Speak with kindness and honesty.",
+          "Respect other people and their time.",
+          "Keep learning with humility."
+        ],
+        "points_id": [
+          "Berbicara dengan santun dan jujur.",
+          "Menghormati orang lain dan waktunya.",
+          "Terus belajar dengan rendah hati."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "literature",
+    "name": "Literature",
+    "name_id": "Literatur",
+    "description": "Read, write and explore ideas",
+    "description_id": "Membaca, menulis, dan menjelajahi ide",
+    "icon": "📚",
+    "color": "pink",
+    "lessons": [
+      {
+        "id": "lit-story",
+        "title": "The Building Blocks of a Story",
+        "title_id": "Unsur Pembentuk Cerita",
+        "duration": "8 min",
+        "level": "Beginner",
+        "level_id": "Pemula",
+        "summary": "Meet character, setting, conflict, and plot.",
+        "summary_id": "Kenali tokoh, latar, konflik, dan alur.",
+        "body": "Stories often bring together characters, setting, conflict, and plot. Characters make choices, the setting shapes the world, conflict creates a problem, and plot shows how events unfold.",
+        "body_id": "Cerita sering memadukan tokoh, latar, konflik, dan alur. Tokoh membuat pilihan, latar membentuk dunia cerita, konflik menghadirkan masalah, dan alur menunjukkan bagaimana peristiwa berkembang.",
+        "points": [
+          "Character: who the story follows.",
+          "Setting: where and when it happens.",
+          "Conflict and plot: the problem and how events develop."
+        ],
+        "points_id": [
+          "Tokoh: siapa yang diikuti dalam cerita.",
+          "Latar: di mana dan kapan cerita berlangsung.",
+          "Konflik dan alur: masalah serta perkembangan peristiwa."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "environment",
+    "name": "Nature & Environment",
+    "name_id": "Alam & Lingkungan",
+    "description": "Learn about our living world",
+    "description_id": "Belajar tentang dunia kehidupan",
+    "icon": "🌿",
+    "color": "mint",
+    "lessons": [
+      {
+        "id": "env-ecosystem",
+        "title": "A Simple Look at Ecosystems",
+        "title_id": "Mengenal Ekosistem",
+        "duration": "8 min",
+        "level": "Beginner",
+        "level_id": "Pemula",
+        "summary": "See how living things interact with each other and their surroundings.",
+        "summary_id": "Lihat bagaimana makhluk hidup berinteraksi satu sama lain dan dengan lingkungannya.",
+        "body": "An ecosystem includes living organisms and the non-living parts of their environment. Energy flows through food relationships, while water and nutrients cycle through the system.",
+        "body_id": "Ekosistem mencakup organisme hidup dan bagian tak hidup dari lingkungannya. Energi mengalir melalui hubungan makan, sementara air dan nutrisi berputar dalam sistem.",
+        "points": [
+          "Biotic factors are living components.",
+          "Abiotic factors include water, light, and soil.",
+          "Changes in one part can affect other parts."
+        ],
+        "points_id": [
+          "Faktor biotik adalah komponen hidup.",
+          "Faktor abiotik mencakup air, cahaya, dan tanah.",
+          "Perubahan pada satu bagian dapat memengaruhi bagian lainnya."
+        ]
+      }
+    ]
+  }
+]

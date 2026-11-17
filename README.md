@@ -1,48 +1,67 @@
-# BLOOMY — Stage 1 + Stage 2 + Stage 3 + Stage 4
+# BLOOMY — Complete Interactive Educational Platform (Stages 1–6)
 
-A cute, colorful, bilingual learning platform starter built with HTML, CSS and vanilla JavaScript.
+A cute, colorful, bilingual (Bahasa Indonesia / English) learning platform built with pure HTML, CSS and vanilla JavaScript.  
+No backend required. Open `index.html` directly in a browser.
 
-## Stage 1
-- Responsive dashboard and navigation
-- Indonesian / English language toggle
-- Guest-mode welcome modal
-- Account entry-point placeholder
-- Cute colorful design system and lightweight animations
+## Features
 
-## Stage 2 — Learning System
-- Explore page with 12 learning categories
-- Search across categories and lesson titles/descriptions
-- Category filter
-- Subject detail pages
-- Starter lesson cards
-- Lesson reading pages with key takeaways
-- Bilingual lesson content (Indonesian / English)
-- Browser history and hash navigation support
-- Starter content stored in `data/learning-content.json`; runtime data is embedded in `js/app.js` so it also works when opening `index.html` directly.
+### Stage 1 — Foundation & Dashboard
+- Responsive dashboard with sidebar + top navigation
+- Guest mode welcome modal
+- Language switcher (ID / EN) with local persistence
+- Quick stats, welcome section, category previews
 
-## Run locally
+### Stage 2 — Learning Library
+- 12 learning categories (Mathematics, Science, Languages, Technology, History & Culture, Arts, Geography, Life Skills, Psychology, Islamic Studies, Literature, Nature & Environment)
+- Search and category browsing
+- Lesson detail pages with bilingual content and key takeaways
+- Mark lesson complete (+15 XP)
+
+### Stage 3 — Quiz & Flashcards
+- Multiple-choice and true/false quizzes with difficulty levels
+- Instant feedback, explanations, score summary, retry
+- Flashcard decks with flip animation, prev/next, shuffle
+- XP rewards for correct answers
+
+### Stage 4 — Gamification
+- XP and level system (100 XP = 1 level)
+- Daily check-in (+5 XP, once per day)
+- Learning streak
+- Learning Garden with plant growth milestones
+- Achievement badges unlocked by activity
+
+### Stage 5 — Personal Learning Tools
+- **My Notes** — create, edit, delete, search notes
+- **Bookmarks** — save / remove favorite lessons
+- **Profile** — display name, avatar picker, quick stats
+- **Settings** — language preference, local data reset with confirmation
+
+### Stage 6 — Learning Analytics & Progress
+- Overall stats: lessons completed, quizzes, average score, XP, level, streak
+- Level progress bar
+- Learning goals (create, track progress, delete)
+- Weekly activity summary
+- Activity history timeline
+
+## How to run
+
 1. Extract the ZIP.
 2. Open the `BLOOMY` folder.
-3. Double-click `index.html`.
+3. Double-click `index.html` (or open it with any modern browser).
 
-For development, VS Code + Live Server is recommended.
+Recommended for development: VS Code + Live Server extension.
 
-## Stage 3 — Quiz & Flashcards
-- Quiz Center with category and difficulty selection
-- Multiple-choice questions in Indonesian and English
-- Instant answer feedback and short explanations
-- Score summary, answer review, retry, and XP rewards
-- Flashcard library with flip, previous/next, and shuffle controls
-- XP total saved locally in the browser
+## Data storage
 
-## Important limitations
-- This is a front-end prototype. Account registration, authentication, cloud sync, online accounts, cloud sync, notes, and full learning progress tracking are not implemented yet. Quiz and flashcard features are available locally in Stage 3.
-- Guest mode works without registration. The account button is a preview only and does not collect credentials.
-- Language preference is saved in browser LocalStorage.
-- Google Fonts are loaded online; system fallbacks are provided.
-- Learning content is starter material and should be reviewed and expanded before formal educational use.
+All progress (XP, completed lessons, quiz history, notes, bookmarks, goals, achievements, language preference) is stored in the browser’s **localStorage** on the current device.
 
-## Structure
+- No cloud sync
+- No real authentication
+- Guest progress is local only
+- Use the Profile page → “Reset all progress” to clear everything
+
+## Project structure
+
 ```text
 BLOOMY/
 ├── index.html
@@ -51,31 +70,51 @@ BLOOMY/
 │   ├── main.css
 │   └── responsive.css
 ├── js/
-│   └── app.js
-└── data/
-    ├── subjects.json
-    └── learning-content.json
+│   ├── app.js              # Core (Stages 1–4)
+│   ├── storage.js          # Centralized localStorage
+│   ├── notes.js
+│   ├── bookmarks.js
+│   ├── profile.js
+│   ├── analytics.js
+│   └── app-extension.js    # Stage 5–6 integration
+├── data/
+│   ├── learning-content.json
+│   ├── subjects.json
+│   ├── quizzes.json
+│   └── flashcards.json
+└── assets/
+    ├── images/
+    └── icons/
 ```
 
-## Next
-- Stage 5: Notes, bookmarks, profile and settings
-- Later: Optional backend and real accounts
+## Technical notes
 
+- Pure front-end: HTML5 + CSS3 + Vanilla JS
+- Mobile-first responsive design
+- Works offline after first load (Google Fonts need network)
+- No paid APIs or external services required
+- Designed to avoid duplicate XP awards for the same activity
 
-## Stage 4 — Learning Garden & Achievements
-- Learning Garden page with a plant that grows through XP milestones
-- XP-based learner levels and progress bar
-- Six achievement badges that unlock from learning activity
-- Daily check-in reward (+5 XP) with a once-per-day limit
-- Learning streak counter based on consecutive daily check-ins
-- Dashboard stats updated with local XP, learning minutes, and streak
-- Garden and achievement interface available in Indonesian and English
-- Progress stored locally in the browser on the current device
+## Testing checklist
 
-## Current progression rules
-- Quiz rewards: 10 XP for each correct answer
-- Daily check-in: 5 XP once per local calendar day
-- Plant milestones: 0, 50, 120, 250, and 500 XP
-- Levels: each 100 XP advances one level
-- Achievements unlock from XP, completed quizzes, best quiz score, and streak
+- [ ] Language toggle switches all visible text
+- [ ] Sidebar navigation reaches every page
+- [ ] Explore → category → lesson flow works
+- [ ] Mark lesson complete awards XP once
+- [ ] Quiz can be taken, scored, reviewed and retried
+- [ ] Flashcards flip, navigate and shuffle
+- [ ] Daily check-in works once per day and updates streak
+- [ ] Notes CRUD + search
+- [ ] Bookmarks add/remove and open
+- [ ] Profile name & avatar save
+- [ ] Goals create / increment / delete
+- [ ] Analytics numbers update after activities
+- [ ] Reset progress clears data
+- [ ] Mobile menu and layout remain usable
 
+## Credits
+
+Built as an educational front-end prototype.  
+Content is starter material and should be reviewed before formal educational use.
+
+✿ Grow your mind, one little step at a time.
