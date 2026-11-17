@@ -1,32 +1,40 @@
-# BLOOMY — Stage 1: Core Interface
+# BLOOMY — Stage 1 + Stage 2
 
 A cute, colorful, bilingual learning platform starter built with HTML, CSS and vanilla JavaScript.
 
-## Included in Stage 1
-- Responsive desktop, tablet and mobile dashboard
-- Sidebar navigation and mobile menu
+## Stage 1
+- Responsive dashboard and navigation
 - Indonesian / English language toggle
 - Guest-mode welcome modal
-- Account entry point placeholder
-- Learning dashboard, subject cards and visual components
-- Lightweight CSS animations and reduced-motion support
-- Starter subject catalogue in `data/subjects.json`
+- Account entry-point placeholder
+- Cute colorful design system and lightweight animations
+
+## Stage 2 — Learning System
+- Explore page with 12 learning categories
+- Search across categories and lesson titles/descriptions
+- Category filter
+- Subject detail pages
+- Starter lesson cards
+- Lesson reading pages with key takeaways
+- Bilingual lesson content (Indonesian / English)
+- Browser history and hash navigation support
+- Starter content stored in `data/learning-content.json`; runtime data is embedded in `js/app.js` so it also works when opening `index.html` directly.
 
 ## Run locally
-1. Extract the ZIP file.
+1. Extract the ZIP.
 2. Open the `BLOOMY` folder.
 3. Double-click `index.html`.
 
-For the best local development experience, open the folder in VS Code and use the Live Server extension.
+For development, VS Code + Live Server is recommended.
 
-## Important notes
-- This is a front-end Stage 1 prototype. Account registration, authentication, cloud sync, real lesson pages, quizzes and progress persistence are not implemented yet.
-- The language preference is saved in browser LocalStorage.
-- Google Fonts are loaded online. A system sans-serif fallback is included.
-- The account button is intentionally a preview/placeholder; it does not create an account or collect credentials.
-- The dashboard numbers are placeholders until learning activity is implemented.
+## Important limitations
+- This is a front-end prototype. Account registration, authentication, cloud sync, quiz engine, flashcards, notes, and learning progress tracking are not implemented yet.
+- Guest mode works without registration. The account button is a preview only and does not collect credentials.
+- Language preference is saved in browser LocalStorage.
+- Google Fonts are loaded online; system fallbacks are provided.
+- Learning content is starter material and should be reviewed and expanded before formal educational use.
 
-## Project structure
+## Structure
 ```text
 BLOOMY/
 ├── index.html
@@ -37,12 +45,12 @@ BLOOMY/
 ├── js/
 │   └── app.js
 └── data/
-    └── subjects.json
+    ├── subjects.json
+    └── learning-content.json
 ```
 
-## Next stages
-- Stage 2: Explore, subject pages, lesson viewer, search and filters
+## Next
 - Stage 3: Quiz engine and flashcards
 - Stage 4: XP, achievements and Learning Garden
 - Stage 5: Notes, bookmarks, profile and settings
-- Later: Optional backend and real user accounts
+- Later: Optional backend and real accounts
