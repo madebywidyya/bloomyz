@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff8fb">
+  <meta name="description" content="BLOOMY — Learn at your own pace. Grow at your own rhythm.">
+  <title>BLOOMY — Learn, Play, Grow</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#home" aria-label="BLOOMY home">
+        <span class="brand-mark">✿</span><span>BLOOMY<span class="brand-dot">.</span></span>
+      </a>
+      <div class="sidebar-label" data-i18n="menu">MENU</div>
+      <nav class="side-nav" aria-label="Main navigation">
+        <a class="nav-link active" href="#home" data-page="home"><span class="nav-icon">⌂</span><span data-i18n="home">Beranda</span></a>
+        <a class="nav-link" href="#explore" data-page="explore"><span class="nav-icon">✿</span><span data-i18n="explore">Jelajahi</span><span class="nav-new">NEW</span></a>
+        <a class="nav-link" href="#learning" data-page="learning"><span class="nav-icon">▤</span><span data-i18n="myLearning">Belajarku</span></a>
+        <a class="nav-link" href="#quiz" data-page="quiz"><span class="nav-icon">✎</span><span data-i18n="quiz">Pusat Kuis</span></a>
+        <a class="nav-link" href="#library" data-page="library"><span class="nav-icon">▧</span><span data-i18n="library">Perpustakaan</span></a>
+      </nav>
+      <div class="sidebar-label second-label" data-i18n="yourSpace">RUANG KAMU</div>
+      <nav class="side-nav">
+        <a class="nav-link" href="#garden" data-page="garden"><span class="nav-icon">❀</span><span data-i18n="garden">Taman Belajar</span></a>
+        <a class="nav-link" href="#notes" data-page="notes"><span class="nav-icon">▱</span><span data-i18n="notes">Catatan</span></a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="mini-garden">
+          <div class="mini-garden-art" aria-hidden="true">🌷 🌱 🌼</div>
+          <strong data-i18n="gardenCardTitle">Tamanmu menunggu!</strong>
+          <p data-i18n="gardenCardText">Belajar sedikit setiap hari, biarkan pengetahuanmu tumbuh.</p>
+          <a href="#garden" class="text-link" data-page="garden"><span data-i18n="visitGarden">Kunjungi taman</span> ↗</a>
+        </div>
+        <button class="profile-mini" id="profileButton">
+          <span class="avatar">🌸</span><span class="profile-copy"><strong id="profileName">Guest learner</strong><small data-i18n="guestMode">Mode tamu</small></span><span class="more">···</span>
+        </button>
+      </div>
+    </aside>
+
+    <main class="main-area" id="mainArea">
+      <header class="topbar">
+        <button class="icon-button mobile-menu" id="menuToggle" aria-label="Open menu">☰</button>
+        <div class="breadcrumb"><span data-i18n="workspace">Ruang belajar</span><span class="crumb-dot">/</span><strong id="pageName" data-i18n="home">Beranda</strong></div>
+        <div class="top-actions">
+          <button class="language-switch" id="languageToggle" aria-label="Change language"><span>文</span><b>ID</b><span class="switch-divider">/</span><span>EN</span></button>
+          <button class="icon-button notification-button" id="notificationButton" aria-label="Notifications">♧<i></i></button>
+          <button class="account-button" id="accountButton"><span class="account-avatar">✿</span><span data-i18n="signIn">Masuk / Daftar</span></button>
+        </div>
+      </header>
+
+      <section class="page-content" id="pageContent">
+        <section class="welcome-row">
+          <div>
+            <div class="eyebrow"><span class="eyebrow-sparkle">✦</span><span data-i18n="goodDay">HARI YANG INDAH UNTUK BELAJAR</span></div>
+            <h1><span data-i18n="hello">Halo, Learner!</span> <span class="wave">✿</span></h1>
+            <p class="welcome-subtitle" data-i18n="welcomeSub">Setiap hal besar dimulai dari rasa ingin tahu yang kecil.</p>
+          </div>
+          <div class="date-chip"><span>☀</span><span id="todayLabel">Hari ini</span></div>
+        </section>
+
+        <section class="hero-card">
+          <div class="hero-content">
+            <div class="hero-kicker"><span class="tiny-star">✦</span><span data-i18n="dailyInspiration">INSPIRASI HARI INI</span></div>
+            <h2 data-i18n="heroTitle">Grow your mind,<br>one little step at a time.</h2>
+            <p data-i18n="heroText">Tidak perlu terburu-buru. Temukan hal baru, nikmati prosesnya, dan rayakan setiap kemajuanmu.</p>
+            <a href="#explore" class="primary-button" data-page="explore"><span data-i18n="startExploring">Mulai menjelajah</span><span>↗</span></a>
+          </div>
+          <div class="hero-art" aria-hidden="true">
+            <div class="sun-orbit"></div><div class="hero-sun">☀</div>
+            <div class="hero-book">📖</div><div class="hero-flower flower-a">🌼</div><div class="hero-flower flower-b">🌷</div>
+            <div class="hero-cloud cloud-a"></div><div class="hero-cloud cloud-b"></div>
+            <span class="floating-star star-a">✦</span><span class="floating-star star-b">✧</span>
+            <div class="hero-ground"></div>
+          </div>
+          <span class="hero-decoration decor-one">✿</span><span class="hero-decoration decor-two">✧</span>
+        </section>
+
+        <section class="stats-grid" aria-label="Learning overview">
+          <article class="stat-card stat-pink"><div class="stat-top"><span data-i18n="learningTime">Waktu belajar</span><span class="stat-icon">◷</span></div><div class="stat-value">0 <small data-i18n="minutes">menit</small></div><div class="stat-foot" data-i18n="startYourJourney">Perjalananmu dimulai di sini</div></article>
+          <article class="stat-card stat-yellow"><div class="stat-top"><span data-i18n="totalPoints">Total poin</span><span class="stat-icon">✧</span></div><div class="stat-value">0 <small>XP</small></div><div class="stat-foot" data-i18n="collectPoints">Kumpulkan poin dari aktivitasmu</div></article>
+          <article class="stat-card stat-mint"><div class="stat-top"><span data-i18n="streak">Streak belajar</span><span class="stat-icon">♨</span></div><div class="stat-value">0 <small data-i18n="days">hari</small></div><div class="stat-foot" data-i18n="littleByLittle">Sedikit demi sedikit, setiap hari</div></article>
+        </section>
+
+        <section class="section-block">
+          <div class="section-heading"><div><div class="section-kicker" data-i18n="discover">TEMUKAN SESUATU YANG BARU</div><h2 data-i18n="exploreWorlds">Jelajahi dunia belajar</h2></div><a href="#explore" class="see-all" data-page="explore"><span data-i18n="seeAll">Lihat semua</span> <span>→</span></a></div>
+          <div class="subject-grid">
+            <a href="#subject-math" class="subject-card subject-lilac"><span class="subject-emoji">📐</span><span class="subject-name">Mathematics</span><span class="subject-desc" data-i18n="mathDesc">Angka, pola & logika</span><span class="subject-arrow">↗</span></a>
+            <a href="#subject-science" class="subject-card subject-mint"><span class="subject-emoji">🧪</span><span class="subject-name">Science</span><span class="subject-desc" data-i18n="scienceDesc">Jelajahi keajaiban alam</span><span class="subject-arrow">↗</span></a>
+            <a href="#subject-language" class="subject-card subject-peach"><span class="subject-emoji">🌍</span><span class="subject-name">Languages</span><span class="subject-desc" data-i18n="languageDesc">Kata membuka dunia</span><span class="subject-arrow">↗</span></a>
+            <a href="#subject-tech" class="subject-card subject-blue"><span class="subject-emoji">💻</span><span class="subject-name">Technology</span><span class="subject-desc" data-i18n="techDesc">Ciptakan sesuatu yang baru</span><span class="subject-arrow">↗</span></a>
+          </div>
+        </section>
+
+        <section class="bottom-grid">
+          <article class="continue-card">
+            <div class="section-heading compact"><div><div class="section-kicker" data-i18n="yourJourney">PERJALANANMU</div><h2 data-i18n="continueLearning">Lanjutkan belajar</h2></div><span class="tiny-pill" data-i18n="comingSoon">SEGERA HADIR</span></div>
+            <div class="empty-learning"><div class="empty-illustration">📚<span>✦</span></div><strong data-i18n="nothingHere">Belum ada perjalanan belajar</strong><p data-i18n="chooseFirst">Pilih topik yang menarik perhatianmu dan mulai petualangan pertama.</p><a href="#explore" class="outline-button" data-page="explore" data-i18n="findLesson">Temukan pelajaran</a></div>
+          </article>
+          <article class="challenge-card">
+            <div class="challenge-top"><span class="challenge-icon">☁</span><span class="tiny-pill pink-pill" data-i18n="littleChallenge">TANTANGAN KECIL</span></div>
+            <h3 data-i18n="curiosityTitle">Ikuti rasa ingin tahumu!</h3>
+            <p data-i18n="curiosityText">Pilih satu topik baru hari ini. Tidak ada target sempurna, cukup mulai.</p>
+            <div class="challenge-bottom"><span>🌱 🌷 🌱</span><span data-i18n="oneStep">Satu langkah kecil</span></div>
+          </article>
+        </section>
+        <footer class="footer"><span>© 2026 BLOOMY</span><span data-i18n="footerQuote">Made for curious minds, everywhere. ✿</span><a href="#about" data-i18n="aboutBloomy">Tentang BLOOMY</a></footer>
+      </section>
+    </main>
+  </div>
+
+  <div class="overlay" id="modalOverlay" aria-hidden="true">
+    <section class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="Close">×</button>
+      <div class="modal-flower">🌷</div><div class="modal-kicker">WELCOME TO BLOOMY</div>
+      <h2 id="modalTitle" data-i18n="modalTitle">Mulai perjalananmu</h2>
+      <p data-i18n="modalText">Kamu bisa menjelajah sebagai tamu atau menyiapkan akun untuk pengalaman personal.</p>
+      <button class="primary-button modal-main" id="guestContinue"><span data-i18n="continueGuest">Lanjut sebagai tamu</span><span>→</span></button>
+      <button class="outline-button modal-secondary" id="createAccount" data-i18n="createAccount">Buat akun (segera hadir)</button>
+      <small data-i18n="accountNote">Pendaftaran akun online belum aktif pada versi awal ini.</small>
+    </section>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="js/app.js"></script>
+</body>
+</html>

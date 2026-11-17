@@ -1,0 +1,110 @@
+[
+  {
+    "id": "mathematics",
+    "name": "Mathematics",
+    "name_id": "Matematika",
+    "description": "Numbers, patterns and logic",
+    "description_id": "Angka, pola, dan logika",
+    "icon": "📐",
+    "color": "lilac"
+  },
+  {
+    "id": "science",
+    "name": "Science",
+    "name_id": "Sains",
+    "description": "Explore the wonders of nature",
+    "description_id": "Jelajahi keajaiban alam",
+    "icon": "🧪",
+    "color": "mint"
+  },
+  {
+    "id": "languages",
+    "name": "Languages",
+    "name_id": "Bahasa",
+    "description": "Words open up the world",
+    "description_id": "Kata membuka dunia",
+    "icon": "🌍",
+    "color": "peach"
+  },
+  {
+    "id": "technology",
+    "name": "Technology",
+    "name_id": "Teknologi",
+    "description": "Create something new",
+    "description_id": "Ciptakan sesuatu yang baru",
+    "icon": "💻",
+    "color": "blue"
+  },
+  {
+    "id": "history",
+    "name": "History & Culture",
+    "name_id": "Sejarah & Budaya",
+    "description": "Stories that shape our world",
+    "description_id": "Kisah yang membentuk dunia",
+    "icon": "🏛️",
+    "color": "yellow"
+  },
+  {
+    "id": "arts",
+    "name": "Arts & Creativity",
+    "name_id": "Seni & Kreativitas",
+    "description": "Imagine, make and express",
+    "description_id": "Berimajinasi, berkarya, dan berekspresi",
+    "icon": "🎨",
+    "color": "peach"
+  },
+  {
+    "id": "geography",
+    "name": "Geography",
+    "name_id": "Geografi",
+    "description": "Discover our planet",
+    "description_id": "Kenali planet kita",
+    "icon": "🗺️",
+    "color": "blue"
+  },
+  {
+    "id": "life-skills",
+    "name": "Life Skills",
+    "name_id": "Keterampilan Hidup",
+    "description": "Skills for everyday life",
+    "description_id": "Keterampilan untuk kehidupan sehari-hari",
+    "icon": "🌱",
+    "color": "mint"
+  },
+  {
+    "id": "psychology",
+    "name": "Psychology & Society",
+    "name_id": "Psikologi & Masyarakat",
+    "description": "Understand people and society",
+    "description_id": "Memahami manusia dan masyarakat",
+    "icon": "🧠",
+    "color": "lilac"
+  },
+  {
+    "id": "islamic-studies",
+    "name": "Islamic Studies",
+    "name_id": "Studi Islam",
+    "description": "Faith, history and character",
+    "description_id": "Iman, sejarah, dan akhlak",
+    "icon": "🌙",
+    "color": "mint"
+  },
+  {
+    "id": "literature",
+    "name": "Literature",
+    "name_id": "Literatur",
+    "description": "Read, write and explore ideas",
+    "description_id": "Membaca, menulis, dan menjelajahi ide",
+    "icon": "📚",
+    "color": "pink"
+  },
+  {
+    "id": "environment",
+    "name": "Nature & Environment",
+    "name_id": "Alam & Lingkungan",
+    "description": "Learn about our living world",
+    "description_id": "Belajar tentang dunia kehidupan",
+    "icon": "🌿",
+    "color": "mint"
+  }
+]
