@@ -1,4 +1,4 @@
-# BLOOMY — Stage 1 + Stage 2
+# BLOOMY — Stage 1 + Stage 2 + Stage 3
 
 A cute, colorful, bilingual learning platform starter built with HTML, CSS and vanilla JavaScript.
 
@@ -27,8 +27,16 @@ A cute, colorful, bilingual learning platform starter built with HTML, CSS and v
 
 For development, VS Code + Live Server is recommended.
 
+## Stage 3 — Quiz & Flashcards
+- Quiz Center with category and difficulty selection
+- Multiple-choice questions in Indonesian and English
+- Instant answer feedback and short explanations
+- Score summary, answer review, retry, and XP rewards
+- Flashcard library with flip, previous/next, and shuffle controls
+- XP total saved locally in the browser
+
 ## Important limitations
-- This is a front-end prototype. Account registration, authentication, cloud sync, quiz engine, flashcards, notes, and learning progress tracking are not implemented yet.
+- This is a front-end prototype. Account registration, authentication, cloud sync, online accounts, cloud sync, notes, and full learning progress tracking are not implemented yet. Quiz and flashcard features are available locally in Stage 3.
 - Guest mode works without registration. The account button is a preview only and does not collect credentials.
 - Language preference is saved in browser LocalStorage.
 - Google Fonts are loaded online; system fallbacks are provided.
@@ -50,7 +58,6 @@ BLOOMY/
 ```
 
 ## Next
-- Stage 3: Quiz engine and flashcards
-- Stage 4: XP, achievements and Learning Garden
+- Stage 4: Achievements and Learning Garden expansion
 - Stage 5: Notes, bookmarks, profile and settings
 - Later: Optional backend and real accounts
