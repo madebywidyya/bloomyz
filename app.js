@@ -18,20 +18,26 @@ function applyLanguage(){
  $("#languageToggle b").textContent=currentLanguage.toUpperCase();
  localStorage.setItem("bloomy-language",currentLanguage);updateDate();
  const hash=location.hash.slice(1);
- if(hash==="explore")renderExplore();else if(hash.startsWith("subject-"))renderSubject(hash.slice(8));else if(hash.startsWith("lesson-"))renderLesson(hash.slice(7));else if(hash==="quiz")renderQuizHome();else if(hash==="library")renderFlashcards();
+ if(hash==="explore")renderExplore();else if(hash.startsWith("subject-"))renderSubject(hash.slice(8));else if(hash.startsWith("lesson-"))renderLesson(hash.slice(7));else if(hash==="quiz")renderQuizHome();else if(hash==="library")renderFlashcards();else if(hash==="garden")renderGarden();
 }
 function updateDate(){const locale=currentLanguage==="id"?"id-ID":"en-US";$("#todayLabel").textContent=new Intl.DateTimeFormat(locale,{weekday:"short",day:"numeric",month:"short"}).format(new Date())}
 function setPageLabel(page){const map={home:"home",explore:"explore",learning:"myLearning",quiz:"quiz",library:"library",garden:"garden",notes:"notes"};$("#pageName").textContent=t(map[page]||"explore");document.querySelectorAll(".nav-link").forEach(a=>a.classList.toggle("active",a.dataset.page===page))}
 function updateNav(){document.querySelectorAll(".nav-link").forEach(a=>a.classList.toggle("active",a.dataset.page==="explore"));$("#pageName").textContent=t("explore");$("#sidebar").classList.remove("open")}
-function syncHomeXP(){const el=document.querySelector(".stat-yellow .stat-value");if(el)el.innerHTML=`${Number(localStorage.getItem("bloomy-xp")||0)} <small>XP</small>`}
+function syncHomeXP(){
+ const xp=Number(localStorage.getItem("bloomy-xp")||0),el=document.querySelector(".stat-yellow .stat-value");
+ if(el)el.innerHTML=`${xp} <small>XP</small>`;
+ const cards=document.querySelectorAll('.stats-grid .stat-card');
+ if(cards[2]){const v=cards[2].querySelector('.stat-value');if(v)v.innerHTML=`${Number(localStorage.getItem('bloomy-streak')||0)} <small>${currentLanguage==='id'?'hari':'days'}</small>`}
+ if(cards[0]){const v=cards[0].querySelector('.stat-value');if(v)v.innerHTML=`${Number(localStorage.getItem('bloomy-minutes')||0)} <small>${currentLanguage==='id'?'menit':'mins'}</small>`}
+}
 function navigate(page){
  history.pushState(null,"","#"+page);
- if(page==="home"){pageContent.innerHTML=homeMarkup;bindHome();applyStaticLanguage();setPageLabel("home");syncHomeXP();syncHomeXP()}
+ if(page==="home"){pageContent.innerHTML=homeMarkup;bindHome();applyStaticLanguage();setPageLabel("home");syncHomeXP()}
  else if(page==="explore"){renderExplore()}
  else if(page.startsWith("subject-")){renderSubject(page.slice(8))}
  else if(page.startsWith("lesson-")){renderLesson(page.slice(7))}
- else if(page==="quiz"){renderQuizHome()}else if(page==="library"){renderFlashcards()}
- else {setPageLabel(page);showToast(currentLanguage==="id"?"Halaman ini akan hadir pada tahap berikutnya.":"This page is coming in a later stage.")}
+ else if(page==="quiz"){renderQuizHome()}else if(page==="library"){renderFlashcards()}else if(page==="garden"){renderGarden()}
+ else {setPageLabel(page);showToast(currentLanguage==="id"?"Fitur ini akan dikembangkan pada tahap berikutnya.":"This feature will be developed in a later stage.")}
 }
 function applyStaticLanguage(){document.querySelectorAll("[data-i18n]").forEach(el=>{const v=t(el.dataset.i18n);if(v!==el.dataset.i18n)el.innerHTML=v})}
 function bindHome(){document.querySelectorAll("[data-page]").forEach(a=>a.addEventListener("click",e=>{e.preventDefault();navigate(a.dataset.page)}));document.querySelectorAll(".subject-card").forEach(card=>card.addEventListener("click",e=>{e.preventDefault();navigate("subject-"+card.dataset.subject)}))}
@@ -88,8 +94,8 @@ function bindGlobal(){
 }
 function start(){
  bindGlobal();applyStaticLanguage();updateDate();syncHomeXP();
- const initial=location.hash.slice(1);if(initial==="explore")renderExplore();else if(initial.startsWith("subject-"))renderSubject(initial.slice(8));else if(initial.startsWith("lesson-"))renderLesson(initial.slice(7));else if(initial==="quiz")renderQuizHome();else if(initial==="library")renderFlashcards();else setPageLabel("home");
- window.addEventListener("popstate",()=>{const h=location.hash.slice(1);if(h==="explore")renderExplore();else if(h.startsWith("subject-"))renderSubject(h.slice(8));else if(h.startsWith("lesson-"))renderLesson(h.slice(7));else if(h==="quiz")renderQuizHome();else if(h==="library")renderFlashcards();else{pageContent.innerHTML=homeMarkup;bindHome();applyStaticLanguage();setPageLabel("home");syncHomeXP()}});
+ const initial=location.hash.slice(1);if(initial==="explore")renderExplore();else if(initial.startsWith("subject-"))renderSubject(initial.slice(8));else if(initial.startsWith("lesson-"))renderLesson(initial.slice(7));else if(initial==="quiz")renderQuizHome();else if(initial==="library")renderFlashcards();else if(initial==="garden")renderGarden();else setPageLabel("home");
+ window.addEventListener("popstate",()=>{const h=location.hash.slice(1);if(h==="explore")renderExplore();else if(h.startsWith("subject-"))renderSubject(h.slice(8));else if(h.startsWith("lesson-"))renderLesson(h.slice(7));else if(h==="quiz")renderQuizHome();else if(h==="library")renderFlashcards();else if(h==="garden")renderGarden();else{pageContent.innerHTML=homeMarkup;bindHome();applyStaticLanguage();setPageLabel("home");syncHomeXP()}});
 }
 start();
 
@@ -129,10 +135,65 @@ function renderQuizHome(){setPageLabel('quiz');const xp=Number(localStorage.getI
 function startQuiz(cat='all',level='beginner'){let pool=quizBank.filter(q=>(cat==='all'||q.cat===cat)&&q.level===level);if(!pool.length){showToast(currentLanguage==='id'?'Belum ada soal untuk kombinasi ini.':'No questions for this combination yet.');return}pool=[...pool].sort(()=>Math.random()-.5).slice(0,Math.min(5,pool.length));quizState={pool,index:0,answers:[],locked:false,cat,level};renderQuizQuestion()}
 function renderQuizQuestion(){if(!quizState)return;const q=quizState.pool[quizState.index],n=quizState.index+1,chosen=quizState.answers[quizState.index];setPageLabel('quiz');pageContent.innerHTML=`<div class="stage-page quiz-play"><button class="back-link" id="quitQuiz">← ${currentLanguage==='id'?'Kembali ke pusat kuis':'Back to quiz center'}</button><div class="quiz-play-top"><span>${subjectName(q.cat)}</span><strong>${currentLanguage==='id'?'Soal':'Question'} ${n} / ${quizState.pool.length}</strong></div><div class="quiz-progress"><span style="width:${n/quizState.pool.length*100}%"></span></div><article class="question-card"><div class="question-number">QUESTION ${String(n).padStart(2,'0')}</div><h2>${currentLanguage==='id'?q.q:q.en}</h2><div class="answer-options">${(currentLanguage==='id'?q.opts:q.optsEn).map((o,i)=>`<button class="answer-option ${chosen!==undefined?(i===q.a?'correct':i===chosen?'incorrect':'muted'):''}" data-answer="${i}" ${chosen!==undefined?'disabled':''}><span>${String.fromCharCode(65+i)}</span>${o}${chosen!==undefined&&i===q.a?'<b>✓</b>':''}</button>`).join('')}</div>${chosen!==undefined?`<div class="answer-feedback ${chosen===q.a?'is-correct':'is-wrong'}"><strong>${chosen===q.a?(currentLanguage==='id'?'Tepat sekali! ✨':'That is correct! ✨'):(currentLanguage==='id'?'Belum tepat, yuk pelajari!':'Not quite — let’s learn!')}</strong><p>${currentLanguage==='id'?q.why:q.whyEn}</p></div><button class="primary-button quiz-next" id="nextQuestion">${n===quizState.pool.length?(currentLanguage==='id'?'Lihat hasil':'See results'):(currentLanguage==='id'?'Soal berikutnya':'Next question')} →</button>`:''}</article></div>`;$('#quitQuiz').addEventListener('click',()=>{quizState=null;renderQuizHome()});document.querySelectorAll('[data-answer]').forEach(b=>b.addEventListener('click',()=>answerQuiz(Number(b.dataset.answer))));if($('#nextQuestion'))$('#nextQuestion').addEventListener('click',()=>{if(quizState.index<quizState.pool.length-1){quizState.index++;renderQuizQuestion()}else renderQuizResult()})}
 function answerQuiz(index){if(!quizState||quizState.answers[quizState.index]!==undefined)return;quizState.answers[quizState.index]=index;quizState.locked=true;renderQuizQuestion()}
-function renderQuizResult(){const correct=quizState.answers.filter((a,i)=>a===quizState.pool[i].a).length;const earned=correct*10;const total=quizState.pool.length;localStorage.setItem('bloomy-xp',String(Number(localStorage.getItem('bloomy-xp')||0)+earned));setPageLabel('quiz');pageContent.innerHTML=`<div class="stage-page quiz-result"><div class="result-flower">${correct===total?'🌟':'🌷'}</div><div class="stage-eyebrow">${currentLanguage==='id'?'SESI SELESAI':'SESSION COMPLETE'}</div><h1 class="stage-title">${currentLanguage==='id'?'Kamu sudah berusaha!':'You showed up and learned!'}</h1><div class="score-ring"><strong>${correct}/${total}</strong><span>${currentLanguage==='id'?'BENAR':'CORRECT'}</span></div><p class="stage-subtitle">${currentLanguage==='id'?`Kamu menjawab ${correct} dari ${total} soal dengan benar dan mendapatkan ${earned} XP.`:`You answered ${correct} out of ${total} correctly and earned ${earned} XP.`}</p><div class="result-actions"><button class="primary-button" id="retryQuiz">${currentLanguage==='id'?'Coba lagi':'Try again'} ↻</button><button class="outline-button" id="reviewQuiz">${currentLanguage==='id'?'Tinjau jawaban':'Review answers'}</button><button class="text-button" id="quizHome">${currentLanguage==='id'?'Kembali ke pusat kuis':'Back to quiz center'}</button></div><div id="quizReview" class="quiz-review" hidden></div></div>`;$('#retryQuiz').addEventListener('click',()=>startQuiz(quizState.cat,quizState.level));$('#quizHome').addEventListener('click',()=>{quizState=null;renderQuizHome()});$('#reviewQuiz').addEventListener('click',()=>{const el=$('#quizReview');el.hidden=false;el.innerHTML=quizState.pool.map((q,i)=>`<article class="review-item"><strong>${i+1}. ${currentLanguage==='id'?q.q:q.en}</strong><p class="${quizState.answers[i]===q.a?'review-right':'review-wrong'}">${currentLanguage==='id'?'Jawaban benar: ':'Correct answer: '}${(currentLanguage==='id'?q.opts:q.optsEn)[q.a]}</p><small>${currentLanguage==='id'?q.why:q.whyEn}</small></article>`).join('');el.scrollIntoView({behavior:'smooth',block:'nearest'})})}
+function renderQuizResult(){const correct=quizState.answers.filter((a,i)=>a===quizState.pool[i].a).length;const earned=correct*10;const total=quizState.pool.length;localStorage.setItem('bloomy-xp',String(Number(localStorage.getItem('bloomy-xp')||0)+earned));localStorage.setItem('bloomy-quiz-count',String(Number(localStorage.getItem('bloomy-quiz-count')||0)+1));localStorage.setItem('bloomy-best-score',String(Math.max(Number(localStorage.getItem('bloomy-best-score')||0),Math.round(correct/total*100))));localStorage.setItem('bloomy-minutes',String(Number(localStorage.getItem('bloomy-minutes')||0)+Math.max(1,total*2)));setPageLabel('quiz');pageContent.innerHTML=`<div class="stage-page quiz-result"><div class="result-flower">${correct===total?'🌟':'🌷'}</div><div class="stage-eyebrow">${currentLanguage==='id'?'SESI SELESAI':'SESSION COMPLETE'}</div><h1 class="stage-title">${currentLanguage==='id'?'Kamu sudah berusaha!':'You showed up and learned!'}</h1><div class="score-ring"><strong>${correct}/${total}</strong><span>${currentLanguage==='id'?'BENAR':'CORRECT'}</span></div><p class="stage-subtitle">${currentLanguage==='id'?`Kamu menjawab ${correct} dari ${total} soal dengan benar dan mendapatkan ${earned} XP.`:`You answered ${correct} out of ${total} correctly and earned ${earned} XP.`}</p><div class="result-actions"><button class="primary-button" id="retryQuiz">${currentLanguage==='id'?'Coba lagi':'Try again'} ↻</button><button class="outline-button" id="reviewQuiz">${currentLanguage==='id'?'Tinjau jawaban':'Review answers'}</button><button class="text-button" id="quizHome">${currentLanguage==='id'?'Kembali ke pusat kuis':'Back to quiz center'}</button></div><div id="quizReview" class="quiz-review" hidden></div></div>`;$('#retryQuiz').addEventListener('click',()=>startQuiz(quizState.cat,quizState.level));$('#quizHome').addEventListener('click',()=>{quizState=null;renderQuizHome()});$('#reviewQuiz').addEventListener('click',()=>{const el=$('#quizReview');el.hidden=false;el.innerHTML=quizState.pool.map((q,i)=>`<article class="review-item"><strong>${i+1}. ${currentLanguage==='id'?q.q:q.en}</strong><p class="${quizState.answers[i]===q.a?'review-right':'review-wrong'}">${currentLanguage==='id'?'Jawaban benar: ':'Correct answer: '}${(currentLanguage==='id'?q.opts:q.optsEn)[q.a]}</p><small>${currentLanguage==='id'?q.why:q.whyEn}</small></article>`).join('');el.scrollIntoView({behavior:'smooth',block:'nearest'})})}
 function renderFlashcards(){setPageLabel('library');flashIndex=0;flashOrder=[...flashBank.keys()];flashFlipped=false;pageContent.innerHTML=`<div class="stage-page"><div class="stage-eyebrow">${currentLanguage==='id'?'ULANGI DAN INGAT':'REVIEW AND REMEMBER'}</div><h1 class="stage-title">${currentLanguage==='id'?'Perpustakaan Kartu':'Flashcard Library'} <span>🃏</span></h1><p class="stage-subtitle">${currentLanguage==='id'?'Latih ingatanmu dengan kartu ringkas dari berbagai mata pelajaran.':'Practice recall with short cards from different subjects.'}</p><div class="flash-toolbar"><span id="flashCounter">1 / ${flashOrder.length}</span><button class="outline-button" id="shuffleFlash">⇄ ${currentLanguage==='id'?'Acak kartu':'Shuffle cards'}</button></div><button class="flashcard" id="flashcard" aria-label="Flip flashcard"><span class="flash-hint">${currentLanguage==='id'?'KLIK UNTUK MEMBALIK KARTU':'CLICK TO FLIP'}</span><span class="flash-side-label" id="flashSide">${currentLanguage==='id'?'PERTANYAAN':'QUESTION'}</span><strong id="flashText"></strong><span class="flash-tap">↻</span></button><div class="flash-actions"><button class="outline-button" id="flashPrev">← ${currentLanguage==='id'?'Sebelumnya':'Previous'}</button><button class="primary-button" id="flashFlip">${currentLanguage==='id'?'Lihat jawaban':'Show answer'} ↻</button><button class="outline-button" id="flashNext">${currentLanguage==='id'?'Berikutnya':'Next'} →</button></div><p class="flash-instruction">${currentLanguage==='id'?'Coba jawab dalam hati sebelum membalik kartu.':'Try to answer in your head before flipping the card.'}</p></div>`;$('#flashcard').addEventListener('click',flipFlash);$('#flashFlip').addEventListener('click',flipFlash);$('#flashPrev').addEventListener('click',()=>moveFlash(-1));$('#flashNext').addEventListener('click',()=>moveFlash(1));$('#shuffleFlash').addEventListener('click',()=>{flashOrder.sort(()=>Math.random()-.5);flashIndex=0;flashFlipped=false;updateFlashcard()});updateFlashcard()}
 function updateFlashcard(){const f=flashBank[flashOrder[flashIndex]];$('#flashCounter').textContent=`${flashIndex+1} / ${flashOrder.length}`;$('#flashSide').textContent=flashFlipped?(currentLanguage==='id'?'JAWABAN':'ANSWER'):(currentLanguage==='id'?'PERTANYAAN':'QUESTION');$('#flashText').textContent=flashFlipped?(currentLanguage==='id'?f.back:f.backEn):(currentLanguage==='id'?f.front:f.frontEn);$('#flashcard').classList.toggle('flipped',flashFlipped);$('#flashFlip').textContent=flashFlipped?(currentLanguage==='id'?'Lihat pertanyaan':'Show question')+' ↻':(currentLanguage==='id'?'Lihat jawaban':'Show answer')+' ↻'}
 function flipFlash(){flashFlipped=!flashFlipped;updateFlashcard()}function moveFlash(dir){flashIndex=(flashIndex+dir+flashOrder.length)%flashOrder.length;flashFlipped=false;updateFlashcard()}
 
 
 start();
+
+
+// STAGE 4 — XP levels, achievements, daily check-in and Learning Garden
+function gardenStats(){
+ const xp=Number(localStorage.getItem('bloomy-xp')||0);
+ const quizzes=Number(localStorage.getItem('bloomy-quiz-count')||0);
+ const best=Number(localStorage.getItem('bloomy-best-score')||0);
+ const streak=Number(localStorage.getItem('bloomy-streak')||0);
+ const level=Math.floor(xp/100)+1;
+ const progress=xp>=500?100:xp%100;
+ const plants=[
+  {min:0,icon:'🌱',id:'seed',name:'Benih rasa ingin tahu',en:'Curiosity seed',desc:'Awali perjalananmu dengan satu langkah kecil.',descEn:'Begin your journey with one little step.'},
+  {min:50,icon:'🌿',id:'sprout',name:'Tunas pengetahuan',en:'Knowledge sprout',desc:'Kebiasaan belajarmu mulai tumbuh.',descEn:'Your learning habit is beginning to grow.'},
+  {min:120,icon:'🪴',id:'plant',name:'Tanaman pembelajar',en:'Growing learner',desc:'Terus rawat rasa ingin tahumu.',descEn:'Keep nurturing your curiosity.'},
+  {min:250,icon:'🌷',id:'bud',name:'Kuncup prestasi',en:'Achievement bud',desc:'Usahamu mulai berbunga.',descEn:'Your effort is starting to bloom.'},
+  {min:500,icon:'🌸',id:'bloom',name:'Taman mekar',en:'Blooming garden',desc:'Lihat sejauh mana kamu telah berkembang!',descEn:'Look how far you have grown!'}
+ ];
+ const plant=[...plants].reverse().find(x=>xp>=x.min)||plants[0];
+ const achievements=[
+  {icon:'🌱',name:'Langkah Pertama',en:'First Step',desc:'Kumpulkan 10 XP',descEn:'Earn 10 XP',done:xp>=10},
+  {icon:'🧠',name:'Si Penasaran',en:'Curious Mind',desc:'Selesaikan 1 kuis',descEn:'Complete 1 quiz',done:quizzes>=1},
+  {icon:'📚',name:'Rajin Berlatih',en:'Practice Makes Progress',desc:'Selesaikan 5 kuis',descEn:'Complete 5 quizzes',done:quizzes>=5},
+  {icon:'⭐',name:'Bintang Kelas',en:'Shining Star',desc:'Raih skor 100% dalam kuis',descEn:'Score 100% in a quiz',done:best===100},
+  {icon:'🔥',name:'Konsisten',en:'Consistent Learner',desc:'Capai streak 3 hari',descEn:'Reach a 3-day streak',done:streak>=3},
+  {icon:'🌸',name:'Mekar Bersama',en:'Bloom Together',desc:'Kumpulkan 250 XP',descEn:'Earn 250 XP',done:xp>=250}
+ ];
+ return {xp,quizzes,best,streak,level,progress,plant,achievements,unlocked:achievements.filter(a=>a.done).length};
+}
+function renderGarden(){
+ setPageLabel('garden');const s=gardenStats(),id=currentLanguage==='id';
+ const checked=localStorage.getItem('bloomy-checkin-date')===localDateKey();
+ const title=id?'Taman Belajarmu':'Your Learning Garden';
+ pageContent.innerHTML=`<div class="stage-page garden-page">
+  <div class="stage-eyebrow">${id?'SETIAP USAHA PUNYA ARTI':'EVERY EFFORT MATTERS'}</div>
+  <h1 class="stage-title">${title} <span>🌷</span></h1>
+  <p class="stage-subtitle">${id?'Rawat taman pengetahuanmu dengan belajar sedikit demi sedikit. Setiap XP membuatnya tumbuh.':'Nurture your garden by learning a little at a time. Every XP helps it grow.'}</p>
+  <section class="garden-hero"><div class="garden-sun">☀</div><div class="garden-cloud cloud-one"></div><div class="garden-cloud cloud-two"></div><div class="garden-ground"></div><div class="garden-plant">${s.plant.icon}</div><div class="garden-butterfly">🦋</div><div class="garden-copy"><span class="tiny-pill">${id?'LEVEL':'LEVEL'} ${s.level}</span><h2>${id?s.plant.name:s.plant.en}</h2><p>${id?s.plant.desc:s.plant.descEn}</p><div class="garden-xp-line"><span>${s.xp} XP</span><span>${s.progress}/100 XP</span></div><div class="garden-progress"><span style="width:${s.progress}%"></span></div><small>${id?`Butuh ${100-s.progress} XP menuju level berikutnya`:`${100-s.progress} XP to the next level`}</small></div></section>
+  <div class="garden-checkin"><div><strong>${id?'Sapa tamanmu hari ini':'Check in with your garden'}</strong><p>${id?'Check-in harian menjaga konsistensi belajarmu.':'A daily check-in helps build a steady learning habit.'}</p></div><button class="primary-button" id="gardenCheckin" ${checked?'disabled':''}>${checked?(id?'Sudah check-in ✓':'Checked in ✓'):(id?'Check-in +5 XP':'Daily check-in +5 XP')}</button></div>
+  <div class="garden-stats"><article><span>✧</span><strong>${s.xp}</strong><small>XP</small><p>${id?'Total poin':'Total points'}</p></article><article><span>🧠</span><strong>${s.quizzes}</strong><small></small><p>${id?'Kuis selesai':'Quizzes completed'}</p></article><article><span>🔥</span><strong>${s.streak}</strong><small>${id?'hari':'days'}</small><p>${id?'Streak belajar':'Learning streak'}</p></article></div>
+  <div class="garden-section-head"><div><div class="section-kicker">${id?'KOLEKSI PENCAPAIAN':'YOUR COLLECTION'}</div><h2>${id?'Lencana Pencapaian':'Achievement Badges'}</h2></div><span class="achievement-count">${s.unlocked}/${s.achievements.length} ${id?'terbuka':'unlocked'}</span></div>
+  <div class="achievement-grid">${s.achievements.map(a=>`<article class="achievement-card ${a.done?'unlocked':'locked'}"><span class="achievement-icon">${a.icon}</span><div><strong>${id?a.name:a.en}</strong><p>${id?a.desc:a.descEn}</p></div><span class="achievement-status">${a.done?'✓':'🔒'}</span></article>`).join('')}</div>
+  <div class="garden-tip">🌼 ${id?'Tips: kamu bisa mendapatkan XP dari kuis dan check-in harian. Progres tersimpan di browser perangkat ini.':'Tip: earn XP from quizzes and daily check-ins. Your progress is saved in this device browser.'}</div>
+ </div>`;
+ $('#gardenCheckin').addEventListener('click',dailyCheckin);
+}
+function localDateKey(){const d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`}
+function dailyCheckin(){
+ const today=localDateKey(),last=localStorage.getItem('bloomy-checkin-date');
+ if(last===today){showToast(currentLanguage==='id'?'Kamu sudah check-in hari ini 🌷':'You have checked in today 🌷');return}
+ const y=new Date();y.setDate(y.getDate()-1);const yesterday=`${y.getFullYear()}-${String(y.getMonth()+1).padStart(2,'0')}-${String(y.getDate()).padStart(2,'0')}`;
+ const streak=last===yesterday?Number(localStorage.getItem('bloomy-streak')||0)+1:1;
+ localStorage.setItem('bloomy-checkin-date',today);localStorage.setItem('bloomy-streak',String(streak));
+ localStorage.setItem('bloomy-xp',String(Number(localStorage.getItem('bloomy-xp')||0)+5));
+ showToast(currentLanguage==='id'?'Check-in berhasil! +5 XP 🌱':'Check-in complete! +5 XP 🌱');renderGarden();
+}

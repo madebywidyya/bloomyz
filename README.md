@@ -1,4 +1,4 @@
-# BLOOMY — Stage 1 + Stage 2 + Stage 3
+# BLOOMY — Stage 1 + Stage 2 + Stage 3 + Stage 4
 
 A cute, colorful, bilingual learning platform starter built with HTML, CSS and vanilla JavaScript.
 
@@ -58,6 +58,24 @@ BLOOMY/
 ```
 
 ## Next
-- Stage 4: Achievements and Learning Garden expansion
 - Stage 5: Notes, bookmarks, profile and settings
 - Later: Optional backend and real accounts
+
+
+## Stage 4 — Learning Garden & Achievements
+- Learning Garden page with a plant that grows through XP milestones
+- XP-based learner levels and progress bar
+- Six achievement badges that unlock from learning activity
+- Daily check-in reward (+5 XP) with a once-per-day limit
+- Learning streak counter based on consecutive daily check-ins
+- Dashboard stats updated with local XP, learning minutes, and streak
+- Garden and achievement interface available in Indonesian and English
+- Progress stored locally in the browser on the current device
+
+## Current progression rules
+- Quiz rewards: 10 XP for each correct answer
+- Daily check-in: 5 XP once per local calendar day
+- Plant milestones: 0, 50, 120, 250, and 500 XP
+- Levels: each 100 XP advances one level
+- Achievements unlock from XP, completed quizzes, best quiz score, and streak
+
